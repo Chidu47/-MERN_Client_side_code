@@ -24,10 +24,10 @@ app.get('/', (req, res) => {
 });
 
 //connecting to database MongoDB
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 // const URL = process.env.CONNECTION_URL
 
 mongoose.connect(process.env.CONNECTION_URL)
-    .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`))) 
+    .then(() => app.listen(PORT, () => console.log(`Server running on port`))) 
     .catch((error) => console.error(error.message))
     
